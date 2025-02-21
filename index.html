@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="Profile.png" alt="My Profile" class="profile-img">
+        <div class="typing-container">
+          <h1 class="typing">Sanjana's Portfolio</h1>
+        </div>
+        <p>Web Developer | Full Stack Developer | Android Developer</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- About Me Section -->
+      <section id="about-me" class="content-section">
+        <h2>About Me</h2>
+        <p>
+          Welcome! 
+          I'm Sanjana, a passionate developer who loves solving problems and building innovative solutions. 
+          My expertise lies in web development and I'm freshly focusing on Android Development and AI-based projects.
+          I'm an enthusiastic learner, eager to develop experience within and grow dynamically.
+        </p>
+        <button onclick="alert('Thank you for learning about me!')">Click Me</button>
+        <section id="resume">
+          <h2>Download My Resume</h2>
+          <a href="RESUME.pdf" download class="btn">Download Resume</a>
+      </section>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="content-section">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Online Monitoring System for Cirtificate Issuance</h3>
+          <p>A GUI-based system for managing candidate details, certificate tracking followed by realtime updates.</p>
+          <button onclick="window.location.href='https://github.com/SanjanaSurpurkar/_CodSoft';">View on GitHub</button>
+        </div>
+        <div class="project">
+          <h3>AI-Based Recommendation System</h3>
+          <p>An intelligent system that predicts financial schemes for different demographics.</p>
+          <button onclick="window.location.href='https://github.com/SanjanaSurpurkar/_CodSoft';">View on GitHub</button>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="content-section">
+        <h2>Experience</h2>
+        <p>
+          Over the years, I have worked on several projects that involved:
+          <ul>
+            <li>Building dynamic web applications with responsive designs.</li>
+            <li>Implementing Real-Time Monitoring of Cirtifiacte Issuance.</li>
+            <li>Developing AI-driven solutions for demographic-specific financial needs.</li>
+          </ul>
+        </p>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="content-section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div>
+            <h3>Languages</h3>
+            <p>Java, Python, HTML, CSS, JavaScript</p>
+          </div>
+          <div>
+            <h3>Frameworks</h3>
+            <p>React, Spring Boot</p>
+          </div>
+          <div>
+            <h3>Cloud</h3>
+            <p>Google Cloud, AWS</p>
+          </div>
+          <div>
+            <h3>Other</h3>
+            <p>Machine Learning</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Personal Website | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

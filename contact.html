@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Contact Section -->
+    <main class="contact-container">
+      <h1>Contact Me</h1>
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <section class="contact-form">
+          <h2>Get In Touch</h2>
+          <form id="contactForm" action="sendmail.php" method="post">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+          <div id="statusMessage"></div>
+        </section>
+
+        <!-- Map and Additional Information -->
+        <section class="map-container">
+          <h2>Find Me Here</h2>
+          <!-- Google Map -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2942.096602200328!2d75.91059329652087!3d17.647544868709687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1737562822378!5m2!1sen!2sin" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <!-- Additional Contact Info -->
+          <div class="contact-details">
+            <h3>Address</h3>
+            <p>Behind Apex Hospital, Hotgi Road, Solapur, India</p>
+
+            <h3>Phone</h3>
+            <p>+91 8432805566</p>
+
+            <h3>Email</h3>
+            <p>surpurkarsanjana@gmail.com</p>
+
+            <!-- Social Media Links -->
+            <div class="social-media">
+              <h3>Follow Me</h3>
+              <a href="#" target="_blank">Facebook</a> | 
+              <a href="#" target="_blank">Twitter</a> | 
+              <a href="#" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- <footer>
+    <p>&copy; 2025 My Personal Website | All Rights Reserved</p>
+  </footer> -->
+
+  <script>
+    // Optional: Show a success message after submitting the form
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+      const statusMessage = document.getElementById('statusMessage');
+      
+      // Example AJAX call to send the form (replace with your actual server endpoint)
+      fetch('sendmail.php', {
+        method: 'POST',
+        body: new FormData(this)
+      })
+        .then(response => response.text())
+        .then(data => {
+          statusMessage.innerHTML = "<p style='color: green;'>Message sent successfully!</p>";
+          this.reset(); // Reset the form after success
+        })
+        .catch(error => {
+          statusMessage.innerHTML = "<p style='color: red;'>Failed to send the message. Try again later.</p>";
+        });
+    });
+  </script>
+</body>
+</html>
