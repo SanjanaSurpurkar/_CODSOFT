@@ -1,0 +1,96 @@
+body {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    background: -webkit-repeating-radial-gradient(circle, rgb(222, 53, 171), rgb(210, 123, 239), rgb(88, 163, 228));
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+li {
+    margin: 0 15px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+a:hover {
+    color: yellow;
+}
+.hero {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f39c12;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-size: 20px;
+}
+.btn:hover {
+    background: #e67e22;
+}
+.services, .about, .contact {
+    text-align: center;
+    padding: 50px 20px;
+}
+.service-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.service {
+    background: #8fce72;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 200px;
+    transition: transform 0.3s;
+}
+.service:hover {
+    transform: scale(1.05);
+}
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+form input, form textarea {
+    border: 2px solid #333;
+    border-radius: 5px;
+    outline: none;
+}
